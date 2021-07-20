@@ -6,20 +6,27 @@ TRANSITION_SLIDE::TRANSITION_SLIDE(class GAME* game):
     TRANSITION(game){
 }
 void TRANSITION_SLIDE::create() {
-    Transition.color = COLOR(0, 0, 0, 255);
-    Transition.img = loadImage("assets\\rect.png");
+    struct SHAPE_VERTEX v[4] = {
+        0,height,
+        width,0,
+        width*3,0,
+        width*2,height
+    };
+    Transition.idx = createShape(v, 4);
+    Transition.color = COLOR(200, 200, 0, 255);
     Transition.vx = 3000;
 }
 void TRANSITION_SLIDE::inTriggerProc() {
-    rectMode(CORNER);
     colorMode(RGB, 255);
     Transition.px = -width;
-    imageColor(Transition.color);
-    image(Transition.img, Transition.px, 0);
+    fill(Transition.color);
+    noStroke();
+    shape(Transition.idx, Transition.px, 0);
 }
 bool TRANSITION_SLIDE::inProc() {
-    imageColor(Transition.color);
-    image(Transition.img, Transition.px, 0);
+    fill(Transition.color);
+    noStroke();
+    shape(Transition.idx, Transition.px, 0);
     if (Transition.px < width) {
         Transition.px += Transition.vx * delta;
         return false;
@@ -30,8 +37,9 @@ void TRANSITION_SLIDE::outTriggerProc() {
     Transition.px = -width * 3;
 }
 bool TRANSITION_SLIDE::outProc() {
-    imageColor(Transition.color);
-    image(Transition.img, Transition.px, 0);
+    fill(Transition.color);
+    noStroke();
+    shape(Transition.idx, Transition.px, 0);
     if (Transition.px < -width) {
         Transition.px += Transition.vx * delta;
         return false;

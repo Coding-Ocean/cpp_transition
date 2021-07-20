@@ -6,7 +6,7 @@ class TRANSITION_SLIDE :
 public:
     struct DATA {
         COLOR color;
-        int img = 0;
+        int idx = 0;
         float px = 0;
         float vx = 0;
     };
