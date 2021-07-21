@@ -5,6 +5,18 @@ TRANSITION::TRANSITION(class GAME* game)
 }
 TRANSITION::~TRANSITION() {
 }
+void TRANSITION::create(){
+}
+void TRANSITION::inTriggerProc(){
+}
+bool TRANSITION::inProc(){
+    return true;
+}
+void TRANSITION::outTriggerProc(){
+}
+bool TRANSITION::outProc(){
+    return true;
+}
 void TRANSITION::inTrigger() {
     if (State == STATE::OUT_END) {
         State = STATE::IN_TRIGGER;

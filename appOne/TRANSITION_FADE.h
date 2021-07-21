@@ -6,7 +6,7 @@ class TRANSITION_FADE :
 public:
     struct DATA {
         COLOR color;
-        float speed = 0;
+        float time = 0;
     };
 private:
     DATA Transition;

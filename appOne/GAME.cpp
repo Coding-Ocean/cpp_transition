@@ -3,12 +3,12 @@
 #include"window.h"
 #include"TITLE.h"
 #include"STAGE.h"
-#include"TRANSITION_SLIDE.h"
+#include"TRANSITION.h"
 #include"GAME.h"
 GAME::GAME() {
     Title = new TITLE(this);
     Stage = new STAGE(this);
-    Transition = new TRANSITION_SLIDE(this);
+    Transition = new TRANSITION(this);
 }
 GAME::~GAME() {
     delete Transition;
@@ -16,7 +16,7 @@ GAME::~GAME() {
     delete Title;
 }
 void GAME::run() {
-    window(1050, 590, true);
+    window(1280, 720);
     hideCursor();
     
     Title->create();

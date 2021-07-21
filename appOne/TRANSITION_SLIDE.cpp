@@ -9,16 +9,16 @@ void TRANSITION_SLIDE::create() {
     struct SHAPE_VERTEX v[4] = {
         0,height,
         width,0,
-        width*3,0,
-        width*2,height
+        width * 3,0,
+        width * 2,height,
     };
     Transition.idx = createShape(v, 4);
-    Transition.color = COLOR(200, 200, 0, 255);
+    Transition.color = COLOR(0, 0, 0, 255);
     Transition.vx = 3000;
 }
 void TRANSITION_SLIDE::inTriggerProc() {
-    colorMode(RGB, 255);
     Transition.px = -width;
+    colorMode(RGB, 255);
     fill(Transition.color);
     noStroke();
     shape(Transition.idx, Transition.px, 0);

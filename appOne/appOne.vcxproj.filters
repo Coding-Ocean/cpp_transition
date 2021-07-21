@@ -5,6 +5,15 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="game">
+      <UniqueIdentifier>{81c03473-9dd3-43fd-8d6d-4c0b4e327caa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scene">
+      <UniqueIdentifier>{f3c3314e-c0cd-4878-aed4-9ec51c662c2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="transition">
+      <UniqueIdentifier>{08c227e1-9eb1-4204-803d-e57d20747a08}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="resource.rc">
@@ -17,24 +26,58 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="GAME.h" />
-    <ClInclude Include="GAME_OBJECT.h" />
-    <ClInclude Include="SCENE.h" />
-    <ClInclude Include="STAGE.h" />
-    <ClInclude Include="TITLE.h" />
-    <ClInclude Include="TRANSITION.h" />
-    <ClInclude Include="TRANSITION_FADE.h" />
-    <ClInclude Include="TRANSITION_SLIDE.h" />
+    <ClInclude Include="GAME.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="GAME_OBJECT.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="SCENE.h">
+      <Filter>scene</Filter>
+    </ClInclude>
+    <ClInclude Include="STAGE.h">
+      <Filter>scene</Filter>
+    </ClInclude>
+    <ClInclude Include="TITLE.h">
+      <Filter>scene</Filter>
+    </ClInclude>
+    <ClInclude Include="TRANSITION.h">
+      <Filter>transition</Filter>
+    </ClInclude>
+    <ClInclude Include="TRANSITION_FADE.h">
+      <Filter>transition</Filter>
+    </ClInclude>
+    <ClInclude Include="TRANSITION_SLIDE.h">
+      <Filter>transition</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="GAME.cpp" />
-    <ClCompile Include="GAME_OBJECT.cpp" />
-    <ClCompile Include="gmain.cpp" />
-    <ClCompile Include="SCENE.cpp" />
-    <ClCompile Include="STAGE.cpp" />
-    <ClCompile Include="TITLE.cpp" />
-    <ClCompile Include="TRANSITION.cpp" />
-    <ClCompile Include="TRANSITION_FADE.cpp" />
-    <ClCompile Include="TRANSITION_SLIDE.cpp" />
+    <ClCompile Include="GAME.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="GAME_OBJECT.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="gmain.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="SCENE.cpp">
+      <Filter>scene</Filter>
+    </ClCompile>
+    <ClCompile Include="STAGE.cpp">
+      <Filter>scene</Filter>
+    </ClCompile>
+    <ClCompile Include="TITLE.cpp">
+      <Filter>scene</Filter>
+    </ClCompile>
+    <ClCompile Include="TRANSITION.cpp">
+      <Filter>transition</Filter>
+    </ClCompile>
+    <ClCompile Include="TRANSITION_FADE.cpp">
+      <Filter>transition</Filter>
+    </ClCompile>
+    <ClCompile Include="TRANSITION_SLIDE.cpp">
+      <Filter>transition</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

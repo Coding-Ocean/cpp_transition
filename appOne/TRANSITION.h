@@ -12,11 +12,11 @@ private:
 public:
     TRANSITION(class GAME* game);
     virtual ~TRANSITION();
-    virtual void create()=0;
-    virtual void inTriggerProc() = 0;
-    virtual bool inProc() = 0;
-    virtual void outTriggerProc() = 0;
-    virtual bool outProc() = 0;
+    virtual void create();
+    virtual void inTriggerProc();
+    virtual bool inProc();
+    virtual void outTriggerProc();
+    virtual bool outProc();
     void inTrigger();
     void outTrigger();
     void draw();

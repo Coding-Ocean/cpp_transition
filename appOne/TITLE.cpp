@@ -12,7 +12,7 @@ void TITLE::init() {
 void TITLE::draw(){
     clear(0,0,255);
     fill(255);
-    printSize(420);
+    printSize(width/5*2);
     print("Title");
     game()->transition()->draw();
 }
