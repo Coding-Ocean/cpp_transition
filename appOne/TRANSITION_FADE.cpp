@@ -2,13 +2,13 @@
 #include"window.h"
 #include"GAME.h"
 #include "TRANSITION_FADE.h"
-TRANSITION_FADE::TRANSITION_FADE(class GAME* game):
-    TRANSITION(game){
+TRANSITION_FADE::TRANSITION_FADE(class GAME* game)
+    :TRANSITION(game){
 }
 void TRANSITION_FADE::create() {
     colorMode(RGB, 255);
     Transition.color = COLOR(0,0,0);
-    Transition.time = 0.7f;
+    Transition.time = 1.7f;
 }
 void TRANSITION_FADE::inTriggerProc(){
     rectMode(CORNER);
@@ -25,7 +25,7 @@ bool TRANSITION_FADE::inProc() {
     fill(Transition.color);
     rect(0, 0, width, height);
     Transition.color.a -= 255 / Transition.time * delta;
-    if (Transition.color.a < 0.0) {
+    if (Transition.color.a < 0.0f) {
         return true;
     }
     return false;
@@ -40,7 +40,7 @@ bool TRANSITION_FADE::outProc() {
     fill(Transition.color);
     rect(0, 0, width, height);
     Transition.color.a += 255 / Transition.time * delta;
-    if (Transition.color.a >= 255.0f) {
+    if (Transition.color.a >= 255) {
         return true;
     }
     return false;

@@ -2,8 +2,8 @@
 #include"window.h"
 #include"GAME.h"
 #include "TRANSITION_SLIDE.h"
-TRANSITION_SLIDE::TRANSITION_SLIDE(class GAME* game):
-    TRANSITION(game){
+TRANSITION_SLIDE::TRANSITION_SLIDE(class GAME* game)
+    :TRANSITION(game){
 }
 void TRANSITION_SLIDE::create() {
     struct SHAPE_VERTEX v[4] = {

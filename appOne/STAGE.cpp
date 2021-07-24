@@ -5,7 +5,8 @@
 #include"TRANSITION.h"
 #include"TITLE.h"
 #include "STAGE.h"
-STAGE::STAGE(class GAME* game) :SCENE(game) {
+STAGE::STAGE(class GAME* game) 
+    :SCENE(game) {
 }
 void STAGE::init() {
     game()->transition()->inTrigger();
@@ -13,6 +14,7 @@ void STAGE::init() {
 void STAGE::draw(){
     clear(255,0,0);
     fill(255);
+    printSize(width / 5 * 2);
     print("Stage");
     game()->transition()->draw();
 }

@@ -1,21 +1,10 @@
 #include"GAME.h"
 #include "TRANSITION.h"
 TRANSITION::TRANSITION(class GAME* game) 
-    :GAME_OBJECT(game) {
+    :GAME_OBJECT(game)
+    ,State(STATE::OUT_END){
 }
 TRANSITION::~TRANSITION() {
-}
-void TRANSITION::create(){
-}
-void TRANSITION::inTriggerProc(){
-}
-bool TRANSITION::inProc(){
-    return true;
-}
-void TRANSITION::outTriggerProc(){
-}
-bool TRANSITION::outProc(){
-    return true;
 }
 void TRANSITION::inTrigger() {
     if (State == STATE::OUT_END) {
@@ -53,6 +42,20 @@ void TRANSITION::draw() {
         break;
     }
 }
+//以下の処理は派生クラスでオーバーライドする
+void TRANSITION::create() {
+}
+void TRANSITION::inTriggerProc() {
+}
+bool TRANSITION::inProc() {
+    return true;
+}
+void TRANSITION::outTriggerProc() {
+}
+bool TRANSITION::outProc() {
+    return true;
+}
+//inまたはoutが終了したかどうか
 bool TRANSITION::inEndFlag() {
     return (State == STATE::IN_END);
 }
